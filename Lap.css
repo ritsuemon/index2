@@ -54,7 +54,8 @@ header{
   position: absolute;
   top: 0;
   width: 100%;
-  /* overflow: hidden; */
+  min-width: 1000px;
+  overflow: hidden;
   margin-bottom: -30px;
   padding-bottom: 0;
   height: 550px;
