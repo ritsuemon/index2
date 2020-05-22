@@ -256,7 +256,7 @@ header{
 .right_text{
   display: inline-block;
   /* 変更したところ */
-  max-width: 300px;
+  max-width: 100px;
   padding-left: 20px;
 }
 
@@ -387,7 +387,7 @@ footer{
 
 .copyright{
   display: inline-block;
-  width: 300px;
+  width: 100px;
   padding-left: 40px;
   margin: 0;
   color: #fff;
