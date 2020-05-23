@@ -17,6 +17,20 @@
             <li><a href="https://pas-pol.jp/news/">NEWS</a></li>
             <li><a href="https://pas-pol.jp/contact/">CONTACT</a></li>
           </ul>
+          <div class="menu_hidden">
+            <div class="in_list">
+              <h3><a href="#">TOP</a></h3>
+              <h3><a href="#">PRODUCT</a></h3>
+              <h3><a href="#">ABOUT</a></h3>
+              <h3><a href="#">NEWS</a></h3>
+              <h3><a href="#">CONTACT</a></h3>
+            </div>
+            <div class="in_menu">
+              <h2 id="text_menu">MENU</h2>
+              <h2 id="menu_ber"><i class="fas fa-list"></i></h2>
+            </div>
+
+          </div>
     </header>
     <div class="home">
       <div class="homeimg" id="photo">
@@ -150,22 +164,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(function(){
+        var w = $(window).width();
+        if (w < 830){
+          $('.in_list').slideUp();
+        }
+      });
+
+      $(function(){
         $('#to_top').click(function(){
           $('html').animate({scrollTop: 0});
         });
       });
+
       $(function(){
-    var setImg = '#photo';
-    var fadeSpeed = 1600;
-    var switchDelay = 5000;
+        var setImg = '#photo';
+        var fadeSpeed = 1600;
+        var switchDelay = 5000;
+        $(setImg).children('img').css({opacity:'0'});
+        $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+        setInterval(function(){
+            $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+       },switchDelay);
+    });
 
-    $(setImg).children('img').css({opacity:'0'});
-    $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
-
-    setInterval(function(){
-        $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
-    },switchDelay);
-});
+    $(function(){
+      $('.in_menu').click(function(){
+        $('.in_list').slideToggle();
+      });
+    });
 
     </script>
   </body>
