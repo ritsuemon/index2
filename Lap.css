@@ -70,7 +70,7 @@ header{
 .in_menu{
   background: #fff;
   width: 100%;
-  height: 36px;
+  height: 38px;
 }
 .in_menu h2{
   background: #fff;
@@ -344,7 +344,7 @@ header{
   }
 }
 @media screen and (max-width:800px) {
-  #top1_more,#top2_more{
+  #top1_more , #top2_more{
     display: none;
   }
   #bottom1_more,#bottom2_more{
