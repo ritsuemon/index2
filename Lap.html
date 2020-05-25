@@ -34,8 +34,8 @@
     </header>
     <div class="home">
       <div class="homeimg" id="photo">
-        <img src="sun.jpg" alt="" class="none">
-        <img src="sea.jpg" alt="" class="none">
+        <img src="sun.jpg" alt="" >
+        <img src="sea.jpg" alt="" >
         <img src="ki2.jpg" alt="">
         <img src="yellow.jpg" alt="">
       </div>
@@ -168,6 +168,13 @@
         if (w < 830){
           $('.in_list').slideUp();
         }
+      });
+
+      $(function(){
+        $('window').resize(function(){
+          var w = $(window).width();
+          $('.homeimg img').css('overflow','hidden')
+        });
       });
 
       $(function(){
