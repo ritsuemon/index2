@@ -161,6 +161,7 @@ header{
   padding: 0;
   padding-bottom: 20px;
   /* padding-top: 550px; */
+  padding-left: 15px;
 }
 
 .go h1{
@@ -252,16 +253,6 @@ header{
 }
 
 
-@media screen and (max-width:800px) {
-  #bottom1_more,#bottom2_more{
-    display: block;
-    float: none;
-    width: 100px;
-    height: 27px;
-    margin-bottom: 20px;
-
-  }
-}
 
 .first_para{
   text-align: center;
@@ -351,7 +342,27 @@ header{
   .tex{
     display: none;
   }
-
+}
+@media screen and (max-width:800px) {
+  #top1_more,#top2_more{
+    display: none;
+  }
+  #bottom1_more,#bottom2_more{
+    display: block;
+    float: none;
+    width: 100px;
+    height: 27px;
+    margin-bottom: 20px;
+  }
+  .product h2 , .news h2{
+    padding: 0;
+  }
+  .midasi{
+    width: 128px;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+  }
 }
 
 .connect{
